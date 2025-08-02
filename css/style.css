@@ -1,0 +1,95 @@
+/* Fonte moderna para o site */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0f0f0f;
+    color: #fff;
+}
+
+/* Cabeçalho com gradiente vibrante e texto neon */
+header {
+    background: linear-gradient(90deg, #8e2de2, #4a00e0);
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff00cc, 0 0 30px #ff00cc;
+}
+
+/* Container centralizado */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Introdução com cor suave */
+p.intro {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #cccccc;
+}
+
+/* Estilo dos cards */
+.moto-card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 15px #8e2de2aa;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/* Card com efeito flutuante */
+.moto-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 0 5px #ff00ccaa;
+}
+
+/* Imagem com rotação e zoom no hover */
+.moto-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 6px #000;
+}
+
+.moto-card:hover img {
+    transform: scale(1.05) rotate(-1.5deg);
+}
+
+/* Título com destaque neon */
+.moto-card h2 {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #00fff7;
+    text-shadow: 0 0 8px #00fff7, 0 0 15px #00fff7;
+    text-align: center;
+}
+
+/* Parágrafo dentro do card */
+.moto-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #dddddd;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Animação suave para tudo */
+* {
+    transition: all 0.3s ease-in-out;
+}
