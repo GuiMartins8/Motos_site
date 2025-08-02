@@ -1,14 +1,39 @@
-function mostrarMotos() {
-  document.getElementById('moto-lista').style.display = 'flex';
-}
-
 const motos = [
-  { nome: 'moto1', img: 'assets/images/moto1.jpg', link: 'motos/moto1.html' },
-  { nome: 'moto2', img: 'assets/images/moto2.jpg', link: 'motos/moto2.html' },
-  { nome: 'moto3', img: 'assets/images/moto3.jpg', link: 'motos/moto3.html' },
-  { nome: 'moto4', img: 'assets/images/moto4.jpg', link: 'motos/moto4.html' },
-  { nome: 'moto5', img: 'assets/images/moto5.jpg', link: 'motos/moto5.html' },
+  {
+    nome: 'Honda Biz 125 2025',
+    img: 'assets/images/moto1.jpg',
+    link: 'motos/moto1.html',
+  },
+  {
+    nome: 'Yamaha XTZ 250',
+    img: 'assets/images/moto2.jpg',
+    link: 'motos/moto2.html',
+  },
+  {
+    nome: 'Harley-Davidson Iron 883',
+    img: 'assets/images/moto3.jpg',
+    link: 'motos/moto3.html',
+  },
+  {
+    nome: 'Indian Scout',
+    img: 'assets/images/moto4.jpg',
+    link: 'motos/moto4.html',
+  },
+  {
+    nome: 'Kawasaki Z900',
+    img: 'assets/images/moto5.jpg',
+    link: 'motos/moto5.html',
+  },
 ];
+
+let motosRenderizadas = false;
+
+function carregarMotoViaIframe(link) {
+  const container = document.getElementById('moto-lista');
+  container.innerHTML = `
+    <iframe src="${link}" width="100%" height="600px" frameborder="0"></iframe>
+  `;
+}
 
 function renderizarMotos() {
   const container = document.getElementById('moto-lista');
@@ -22,22 +47,16 @@ function renderizarMotos() {
       <h3>${moto.nome}</h3>
     `;
     card.addEventListener('click', () => {
-      window.location.href = moto.link;
+      carregarMotoViaIframe(moto.link);
     });
     container.appendChild(card);
   });
 }
 
 document.getElementById('btn-ver-motos').addEventListener('click', () => {
-  document.getElementById('moto-lista').scrollIntoView({ behavior: 'smooth' });
-});
-
-let motosRenderizadas = false;
-
-function mostrarMotos() {
   if (!motosRenderizadas) {
     renderizarMotos();
     motosRenderizadas = true;
   }
-  document.getElementById('moto-lista').style.display = 'flex';
-}
+  document.getElementById('moto-lista').scrollIntoView({ behavior: 'smooth' });
+});
